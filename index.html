@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>example</title>
+  <style type="text/CSS" >
+    label{
+      width: 100px;
+      display: inline-block;
+      margin: 4px;
+    }
+    body{
+      border-radius: 10px;
+      background: url('./img/quuem.jpg') no-repeat center center/cover;
+      color:rgb(24, 23, 17);
+      width: 290px;
+      padding: 4px;
+    }
+  
+
+   
+  
+
+  </style>
+
+</head>
+<body>
+  
+  <p style=" text-align:center" ><h1 >Our Menu</h1></p>
+  <p id="menuItems"></p>
+  <input  required type="text" class="menuField" id="menuField">
+  <input  style=" text-align:center" type="submit" value="submit" class="menuSubmit">
+  <p id="userSelection"></p>
+  <p id="ingredients"></p>
+
+<script  >
+  let item1="banku with okro";
+let iline1="corndough,cassavadough mixed with water and cooked chopped okro";
+let item2="rice with chicken";
+let iline2="cooked plan rice with chickenmea";
+let item3="beans with gari and red oil";
+let iline3=" cooked row beans,gari with oil";
+let item4="fufu with goat soup";
+let iline4="goatmeat and cassava,plantian";
+ document.getElementById("menuItems").innerHTML=" 1." + item1 + "<br> 2."+ item2 + "<br> 3. "+ item3 +"<br> 4."+ item4 +"";
+  const menuField=document.querySelector(".menuField");
+  const menuSubmit =document.querySelector(".menuSubmit");
+
+  function checkMenu() {
+     const menuValue = Number( menuField.value);
+     if(menuValue==1){
+       document.getElementById("userSelection").innerHTML="you have selected: "+ item1;
+       document.getElementById("ingredients").innerHTML="The ingredients are: "+ ing1;
+     }
+     else if(menuValue==2){
+       document.getElementById("userSelection").innerHTML="you have selected: "+ item2;
+       document.getElementById("ingredients").innerHTML="The ingredients are: "+ ing2 ;
+     }
+     else  if(menuValue==3){
+       document.getElementById("userSelection").innerHTML="you have selected: "+ item3;
+       document.getElementById("ingredients").innerHTML="The ingredients are: "+ ing3;
+     }
+      else if(menuValue==4){
+       document.getElementById("userSelection").innerHTML="you have selected: "+ item4;
+       document.getElementById("ingredients").innerHTML="The ingredients are: "+ ing4;
+     }
+  }
+
+  menuSubmit.addEventListener("click",checkMenu);
+</script>
+
+
+
+</body>
+</html>
